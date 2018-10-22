@@ -6,6 +6,7 @@
  * Time: PM 7:32
  */
 
+
 $dbh = new PDO('mysql:host=127.0.0.1;dbname=TODOLIST', 'root', 'root');
 
 echo '<xmp>';

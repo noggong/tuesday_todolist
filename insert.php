@@ -9,9 +9,7 @@
 $dbh = new PDO('mysql:host=127.0.0.1;dbname=TODOLIST', 'root', 'root');
 
 echo '<xmp>';
-foreach($dbh->query('SELECT * from items') as $row) {
-    print_r($row);
-}
+$dbh->query('insert into items (contents, excute_date) values ("와라라라", "2018-10-12")');
 echo '</xmp>';
 
 $dbh = null;
