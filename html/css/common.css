@@ -1,0 +1,75 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.gray-font {color: #808080 !important}
+body {background: #282828; color: rgba(255,255,255,0.87)}
+
+/* 상단 바 */
+header, nav, #container {position: relative}
+#wrap {position: absolute}
+{position: absolute}
+header {box-shadow: 0 1px 3px 0 rgba(0,0,0,0.15); height: 43px; }
+header > * {position: absolute; top:0; bottom:0; line-height: 43px;}
+header #logo {left: 30px}
+header #finder {position: relative; display: inline-block; left: 50%; transform: translateX(-50%)}
+header #quick {right: 30px}
+header #quick li {display: inline-block;}
+header #quick li a {padding: 0 10px;}
+
+/* 네비게이션 */
+nav {padding-top: 24px; padding-left: 30px; width: 236px;}
+nav > ul > li {height: 42px; line-height: 42px;}
+
+#wrap {background: #1f1f1f; left: 236px; top: 0; right: 0; bottom: 0; padding: 50px 30px;}
+#wrap h2 {font-size: 1.2em; margin-bottom: 6px;}
+#wrap h2 time {display: inline-block; font-size: 0.6em; padding-left: 5px;}
+#wrap .items li {line-height: 47px;}
+#wrap .items li label {display: inline-block; height: 47px; line-height: 47px}
+#wrap .items li label .contents {display: inline-block; vertical-align: middle}
+#wrap .items .complete {vertical-align: middle}
