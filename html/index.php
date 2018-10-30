@@ -1,3 +1,11 @@
+<?php
+$dbh = new PDO('mysql:host=127.0.0.1;dbname=TODOLIST', 'root', 'root');
+$statArr = [
+    'Y' => '완료',
+    'N' => '미완료',
+];
+
+?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -41,17 +49,29 @@
             <div id="wrap">
                 <h2>Today <time class="gray-font">Sun 21 Oct</time></h2>
                 <ul class="items">
-                    <li>
-                        <div>
-                            <label>
-                                <input type="checkbox" class="complete" />
-                                <span class="contents">PHP Study</span>
-                            </label>
-                            <button></button>
-                        </div>
-                    </li>
+                    <?php
+                    foreach ($dbh->query('SELECT * from items', PDO::FETCH_ASSOC) as $row) {
+                        $checked = '';
+                        if ($row['stat'] == 'Y') $checked = 'checked';
+                    ?>
+                        <li>
+                            <div>
+                                <label>
+                                    <input type="checkbox" class="complete" <?php echo $checked?> />
+                                    <span class="contents"><?php echo $row['contents']?></span>
+                                </label>
+                                <button></button>
+                            </div>
+                        </li>
+                    <?php };?>
                 </ul>
-                <div><button>Add Task</button></div>
+                <div>
+                    <form action="/insert.php" method="post">
+                        <input type="text" name="contents" />
+                        <input type="checkbox" name="isCOmple" value="1"/>
+                        <input type="submit" value="Add Task">
+                    </form>
+                </div>
             </div>
         </div>
     </div>
