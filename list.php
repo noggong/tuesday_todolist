@@ -5,7 +5,8 @@
  * Date: 2018. 10. 9.
  * Time: PM 7:32
  */
-// localhost = '127.0.0.1';
+echo '11';exit;
+//$localhost = '127.0.0.1';
 $dbh = new PDO('mysql:host=127.0.0.1;dbname=TODOLIST', 'root', 'root');
 
 $statArr = [
